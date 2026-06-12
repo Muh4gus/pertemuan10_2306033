@@ -21,6 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool("isLogin", true);
     await prefs.setString("username", usernameController.text.trim());
+    if (!mounted) return;
 
     Navigator.pushReplacement(
       context,
