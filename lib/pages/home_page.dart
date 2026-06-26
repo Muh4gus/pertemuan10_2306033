@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
     if (!mounted) return;
     setState(() {
       products = allProducts.reversed
-          .take(3)
+          .take(5)
           .toList();
     });
   }

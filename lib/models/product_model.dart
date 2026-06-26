@@ -4,12 +4,14 @@ class ProductModel{
   final String name;
   final String description;
   final int price;
+  final String image;
 
   // Constructor
   ProductModel({
     required this.name,
     required this.description,
     required this.price,
+    required this.image,
   });
 
   Map<String, dynamic> toMap() {
@@ -17,6 +19,7 @@ class ProductModel{
       'name': name,
       'description': description,
       'price': price,
+      'image': image,
     };
   }
 
@@ -27,6 +30,7 @@ class ProductModel{
       name: map['name'] ?? '',
       description: map['description'] ?? '',
       price: map['price'] ?? 0,
+      image: map['image'] ?? '',
     );
   }
 
